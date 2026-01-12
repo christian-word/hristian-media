@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Християнський Медіа-Архів</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --accent-blue: #38bdf8;
+            --accent-green: #22c55e;
+            --accent-red: #ef4444;
+            --text-main: #f8fafc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-dark);
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(34, 197, 94, 0.1) 0%, transparent 40%);
+            color: var(--text-main);
+            min-height: 100vh;
+        }
+
+        /* Верхнє меню */
+        .header {
+            background: rgba(30, 41, 59, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent-green);
+            text-decoration: none;
+        }
+
+        .logo i {
+            font-size: 2rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 5px;
+            list-style: none;
+        }
+
+        .nav-menu li a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            color: #94a3b8;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .nav-menu li a:hover,
+        .nav-menu li a.active {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-blue);
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--text-main);
+            cursor: pointer;
+        }
+
+        /* Основний контент */
+        .main-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-header {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-subtitle {
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+
+        /* Плеєр */
+        .player-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .video-player {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            background: #000;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-info {
+            padding: 20px 0;
+        }
+
+        .video-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .video-meta {
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+
+        /* Плейлист */
+        .playlist-panel {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 20px;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .playlist-header {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .filter-tabs button {
+            flex: 1;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: #94a3b8;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .filter-tabs button:hover,
+        .filter-tabs button.active {
+            background: rgba(56, 189, 248, 0.2);
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+        }
+
+        .video-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .video-item {
+            display: flex;
+            gap: 15px;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .video-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateX(5px);
+        }
+
+        .video-item.active {
+            background: rgba(56, 189, 248, 0.15);
+            border-color: var(--accent-blue);
+        }
+
+        .video-item img {
+            width: 120px;
+            height: 68px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .video-item-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .video-item-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .video-item-channel {
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+
+        .video-item-date {
+            font-size: 0.75rem;
+            color: #64748b;
+            margin-top: 3px;
+        }
+
+        /* Скролбар */
+        .playlist-panel::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .playlist-panel::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+
+        .playlist-panel::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Футер */
+        footer {
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-section h3 {
+            color: var(--accent-green);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #94a3b8;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-blue);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: #94a3b8;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: rgba(56, 189, 248, 0.2);
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            color: #64748b;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Адаптивність */
+        @media (max-width: 1024px) {
+            .player-section {
+                grid-template-columns: 1fr;
+            }
+
+            .playlist-panel {
+                max-height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: rgba(15, 23, 42, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 20px;
+                transition: left 0.3s;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .video-item img {
+                width: 100px;
+                height: 56px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #94a3b8;
+        }
+
+        .new-badge {
+            display: inline-block;
+            background: var(--accent-green);
+            color: #000;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            margin-left: 8px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <nav class="nav-container">
+        <a href="#" class="logo">
+            <i class="fas fa-church"></i>
+            <span>Дім Євангелія</span>
+        </a>
+        
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#" class="active"><i class="fas fa-microphone"></i> Проповіді</a></li>
+            <li><a href="#music"><i class="fas fa-music"></i> Музика</a></li>
+            <li><a href="#books"><i class="fas fa-book"></i> Книги</a></li>
+            <li><a href="#programs"><i class="fas fa-desktop"></i> Програми</a></li>
+            <li><a href="#bible"><i class="fas fa-bible"></i> Читання Біблії</a></li>
+        </ul>
+
+        <button class="mobile-toggle" id="mobileToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+</header>
+
+<main class="main-content">
+    <div class="section-header">
+        <h1 class="section-title">Проповіді</h1>
+        <p class="section-subtitle">Архів проповідей та служінь церкви "Дім Євангелія"</p>
+    </div>
+
+    <div class="player-section">
+        <div class="video-player">
+            <div class="video-wrapper">
+                <iframe id="mainPlayer" src="" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <h2 class="video-title" id="currentTitle">Завантаження...</h2>
+                <p class="video-meta" id="currentMeta">Оберіть відео зі списку</p>
+            </div>
+        </div>
+
+        <div class="playlist-panel">
+            <div class="playlist-header">
+                <i class="fas fa-list"></i> Плейлист
+            </div>
+            
+            <div class="filter-tabs">
+                <button class="active" onclick="filterVideos('all')">
+                    <i class="fas fa-list"></i> Всі
+                </button>
+                <button onclick="filterVideos('new')">
+                    <i class="fas fa-fire"></i> Нові
+                </button>
+                <button onclick="filterVideos('old')">
+                    <i class="fas fa-archive"></i> Архів
+                </button>
+            </div>
+
+            <div id="videoList" class="video-list">
+                <div class="loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Завантаження плейлиста...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3><i class="fas fa-church"></i> Про нас</h3>
+            <p>Церква "Дім Євангелія" - місце, де кожен може зустріти Бога та знайти своє призначення.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://t.me" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3><i class="fas fa-link"></i> Посилання</h3>
+            <a href="#sermons">Проповіді</a>
+            <a href="#music">Музика</a>
+            <a href="#books">Книги</a>
+            <a href="#programs">Програми</a>
+            <a href="#bible">Читання Біблії</a>
+        </div>
+
+        <div class="footer-section">
+            <h3><i class="fas fa-map-marker-alt"></i> Контакти</h3>
+            <p><i class="fas fa-map-pin"></i> м. Суми, Україна</p>
+            <p><i class="fas fa-envelope"></i> info@gospel.org.ua</p>
+            <p><i class="fas fa-phone"></i> +380 XX XXX XX XX</p>
+        </div>
+
+        <div class="footer-section">
+            <h3><i class="fas fa-clock"></i> Розклад служінь</h3>
+            <p>Неділя: 10:00 - Ранкове служіння</p>
+            <p>Середа: 18:00 - Молитовне служіння</p>
+            <p>П'ятниця: 18:00 - Молодіжне служіння</p>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>© 2025 Церква "Дім Євангелія", м. Суми | Створено з <i class="fas fa-heart" style="color: var(--accent-red);"></i></p>
+    </div>
+</footer>
+
+<script>
+    // Підключення до вашої бази даних
+    const JSON_URL = 'https://raw.githubusercontent.com/christian-word/Audio-PlayEpic/main/video-YouTube/database.json';
+    const player = document.getElementById('mainPlayer');
+    const listContainer = document.getElementById('videoList');
+    const currentTitle = document.getElementById('currentTitle');
+    const currentMeta = document.getElementById('currentMeta');
+
+    let allVideos = [];
+    let currentFilter = 'all';
+
+    // Ініціалізація плеєра
+    async function initPlayer() {
+        try {
+            const response = await fetch(JSON_URL);
+            allVideos = await response.json();
+
+            if (allVideos.length === 0) {
+                listContainer.innerHTML = '<p class="loading">Відео не знайдено</p>';
+                return;
+            }
+
+            // Додаємо дати до відео (для сортування)
+            allVideos = allVideos.map((video, index) => ({
+                ...video,
+                addedDate: Date.now() - (index * 86400000), // Симуляція дат
+                isNew: index < 5 // Перші 5 - нові
+            }));
+
+            // Завантажуємо перше відео
+            playVideo(allVideos[0], 0);
+            
+            // Показуємо плейлист
+            renderPlaylist();
+
+        } catch (e) {
+            listContainer.innerHTML = '<p class="loading">Помилка завантаження бази даних</p>';
+            console.error(e);
+        }
+    }
+
+    // Відображення плейлиста
+    function renderPlaylist() {
+        let videosToShow = allVideos;
+
+        // Фільтрація
+        if (currentFilter === 'new') {
+            videosToShow = allVideos.filter(v => v.isNew);
+        } else if (currentFilter === 'old') {
+            videosToShow = allVideos.filter(v => !v.isNew);
+        }
+
+        if (videosToShow.length === 0) {
+            listContainer.innerHTML = '<p class="loading">Відео не знайдено</p>';
+            return;
+        }
+
+        listContainer.innerHTML = videosToShow.map((video, index) => {
+            const actualIndex = allVideos.indexOf(video);
+            const date = new Date(video.addedDate).toLocaleDateString('uk-UA');
+            
+            return `
+                <div class="video-item ${actualIndex === 0 ? 'active' : ''}" 
+                     onclick="playVideo(allVideos[${actualIndex}], ${actualIndex})" 
+                     data-index="${actualIndex}">
+                    <img src="${video.thumbnail}" alt="thumbnail">
+                    <div class="video-item-info">
+                        <div class="video-item-title">
+                            ${video.title}
+                            ${video.isNew ? '<span class="new-badge">Нове</span>' : ''}
+                        </div>
+                        <div class="video-item-channel">${video.channel}</div>
+                        <div class="video-item-date">${date}</div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+    }
+
+    // Відтворення відео
+    function playVideo(video, index) {
+        player.src = `https://www.youtube.com/embed/${video.videoId}?autoplay=1`;
+        currentTitle.textContent = video.title;
+        currentMeta.textContent = `${video.channel} • ${new Date(video.addedDate).toLocaleDateString('uk-UA')}`;
+
+        // Оновлюємо активний елемент
+        document.querySelectorAll('.video-item').forEach(el => {
+            el.classList.remove('active');
+        });
+        
+        const activeItem = document.querySelector(`.video-item[data-index="${index}"]`);
+        if (activeItem) {
+            activeItem.classList.add('active');
+            activeItem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    }
+
+    // Фільтрація відео
+    function filterVideos(filter) {
+        currentFilter = filter;
+        
+        // Оновлюємо активну кнопку
+        document.querySelectorAll('.filter-tabs button').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        event.target.closest('button').classList.add('active');
+        
+        renderPlaylist();
+    }
+
+    // Мобільне меню
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    mobileToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        const icon = mobileToggle.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+    });
+
+    // Закриття меню при кліку на посилання
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            mobileToggle.querySelector('i').classList.add('fa-bars');
+            mobileToggle.querySelector('i').classList.remove('fa-times');
+        });
+    });
+
+    // Запуск
+    initPlayer();
+</script>
+
+</body>
+</html>
