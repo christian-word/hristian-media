@@ -551,6 +551,11 @@
 
         /* MOBILE RESPONSIVE */
         @media (max-width: 968px) {
+            .mobile-toggle {
+                display: block;
+                z-index: 1001;
+            }
+
             .nav-menu {
                 position: fixed;
                 top: 80px;
@@ -562,8 +567,9 @@
                 padding: 30px;
                 gap: 0;
                 overflow-y: auto;
-                transition: left 0.3s;
+                transition: left 0.4s ease-in-out;
                 box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                z-index: 999;
             }
 
             .nav-menu.active {
@@ -593,10 +599,6 @@
             }
 
             .nav-menu li.active .dropdown {
-                display: block;
-            }
-
-            .mobile-toggle {
                 display: block;
             }
 
@@ -654,7 +656,6 @@
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="header">
     <div class="header-container">
         <a href="index.html" class="logo">
@@ -667,7 +668,7 @@
 
         <nav>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html"><i class="fas fa-home"></i> Головна</a></li>
+                <li><a href="#"><i class="fas fa-home"></i> Головна</a></li>
                 <li>
                     <a href="#"><i class="fas fa-users"></i> Про нас <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
                     <div class="dropdown">
@@ -706,13 +707,12 @@
             </ul>
         </nav>
 
-        <button class="mobile-toggle" id="mobileToggle">
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Відкрити меню">
             <i class="fas fa-bars"></i>
         </button>
     </div>
 </header>
 
-<!-- HERO SECTION -->
 <section class="hero">
     <div class="hero-content">
         <h1>Ласкаво просимо до Дому Євангелія</h1>
@@ -730,7 +730,6 @@
     </div>
 </section>
 
-<!-- SCHEDULE SECTION -->
 <section class="section schedule" id="schedule">
     <div class="container">
         <div class="section-header">
@@ -763,7 +762,6 @@
     </div>
 </section>
 
-<!-- QUICK ACCESS -->
 <section class="section quick-access">
     <div class="container">
         <div class="section-header">
@@ -799,7 +797,6 @@
     </div>
 </section>
 
-<!-- LATEST SERMONS -->
 <section class="section sermons">
     <div class="container">
         <div class="section-header">
@@ -808,7 +805,7 @@
         </div>
 
         <div class="sermons-grid" id="latestSermons">
-            <!-- Буде заповнено через JavaScript -->
+            <p style="text-align: center; grid-column: 1/-1; color: var(--text-gray);">Завантаження...</p>
         </div>
 
         <div class="view-all">
@@ -820,7 +817,6 @@
     </div>
 </section>
 
-<!-- ABOUT SECTION -->
 <section class="section about" id="about">
     <div class="container">
         <div class="about-content">
@@ -840,7 +836,6 @@
     </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer" id="contact">
     <div class="footer-content">
         <div class="footer-section">
@@ -884,36 +879,90 @@
 </footer>
 
 <script>
-    // Mobile menu toggle
-    const mobileToggle = document.getElementById('mobileToggle');
-    const navMenu = document.getElementById('navMenu');
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
 
-    mobileToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        const icon = mobileToggle.querySelector('i');
-        icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-times');
-    });
+        // 1. Мобільне меню (Toggle)
+        if (mobileToggle && navMenu) {
+            mobileToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+                
+                const icon = mobileToggle.querySelector('i');
+                if (navMenu.classList.contains('active')) {
+                    icon.classList.replace('fa-bars', 'fa-times');
+                } else {
+                    icon.classList.replace('fa-times', 'fa-bars');
+                }
+            });
 
-    // Mobile dropdown toggle
-    document.querySelectorAll('.nav-menu > li > a').forEach(link => {
-        link.addEventListener('click', (e) => {
-            if (window.innerWidth <= 968 && link.nextElementSibling) {
-                e.preventDefault();
-                link.parentElement.classList.toggle('active');
-            }
+            // Закриття меню при кліку ТІЛЬКИ на кінцеві посилання
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    const hasDropdown = link.nextElementSibling && link.nextElementSibling.classList.contains('dropdown');
+                    const isDropdownLink = link.closest('.dropdown');
+                    
+// Закриваємо меню тільки якщо:
+                    // 1. Це мобільна версія
+                    // 2. Це НЕ батьківське посилання з dropdown
+                    // 3. АБО це посилання всередині dropdown
+                    if (window.innerWidth <= 968 && (!hasDropdown || isDropdownLink)) {
+                        navMenu.classList.remove('active');
+                        mobileToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                    }
+                });
+            });
+        }
+
+        // 2. Мобільні випадаючі списки (Dropdowns)
+        document.querySelectorAll('.nav-menu > li > a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const dropdown = link.nextElementSibling;
+                if (window.innerWidth <= 968 && dropdown && dropdown.classList.contains('dropdown')) {
+                    e.preventDefault();
+                    
+                    // Закриваємо інші dropdown
+                    document.querySelectorAll('.nav-menu > li').forEach(item => {
+                        if (item !== link.parentElement) {
+                            item.classList.remove('active');
+                        }
+                    });
+                    
+                    // Перемикаємо поточний
+                    link.parentElement.classList.toggle('active');
+                }
+            });
+        });
+
+        // 3. Завантаження проповідей
+        loadLatestSermons();
+
+        // 4. Плавний скрол
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
         });
     });
 
-    // Load latest sermons
+    // Функція завантаження проповідей
     async function loadLatestSermons() {
         const container = document.getElementById('latestSermons');
+        if (!container) return;
         
         try {
             const response = await fetch('https://raw.githubusercontent.com/christian-word/hristian-media/refs/heads/main/json/database.json');
-            const sermons = await response.json();
+            if (!response.ok) throw new Error('Network response was not ok');
             
-            // Показуємо тільки перші 4 проповіді
+            const sermons = await response.json();
             const latestSermons = sermons.slice(0, 4);
             
             container.innerHTML = latestSermons.map(sermon => {
@@ -923,7 +972,6 @@
                     year: 'numeric'
                 });
                 
-                // Декодування HTML entities
                 const decodeHTML = (text) => {
                     const textarea = document.createElement('textarea');
                     textarea.innerHTML = text;
@@ -951,29 +999,10 @@
             
         } catch (error) {
             console.error('Помилка завантаження проповідей:', error);
-            container.innerHTML = '<p style="text-align: center; color: var(--text-gray);">Помилка завантаження проповідей</p>';
+            container.innerHTML = '<p style="text-align: center; grid-column: 1/-1; color: var(--text-gray);">Не вдалося завантажити останні проповіді</p>';
         }
     }
+</script>
 
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const href = this.getAttribute('href');
-            if (href !== '#' && document.querySelector(href)) {
-                e.preventDefault();
-                document.querySelector(href).scrollIntoView({
-                    behavior: 'smooth'
-                });
-                
-                // Закриваємо мобільне меню
-                if (window.innerWidth <= 968) {
-                    navMenu.classList.remove('active');
-                    mobileToggle.querySelector('i').classList.add('fa-bars');
-                    mobileToggle.querySelector('i').classList.remove('fa-times');
-                }
-            }
-        });
-    });
-
-    // Завантажуємо проповіді при завантаженні сторінки
-    loadLatestSermons();
+</body>
+</html>
