@@ -948,26 +948,41 @@
         }).join('');
     }
 
-    // Відтворення відео
-    function playVideo(video, index) {
-        player.src = `https://www.youtube.com/embed/${video.videoId}?autoplay=1`;
-        currentTitle.textContent = decodeHTML(video.title);
-        currentMeta.innerHTML = `
-            <span><i class="fas fa-user"></i> ${video.channel}</span>
-            <span><i class="fas fa-calendar"></i> ${new Date(video.addedDate).toLocaleDateString('uk-UA')}</span>
-        `;
+// Відтворення відео
+function playVideo(video, index) {
+    // Додаємо autoplay=1 для автоматичного відтворення
+    player.src = `https://www.youtube.com/embed/${video.videoId}?autoplay=1`;
+    currentTitle.textContent = decodeHTML(video.title);
+    currentMeta.innerHTML = `
+        <span><i class="fas fa-user"></i> ${video.channel}</span>
+        <span><i class="fas fa-calendar"></i> ${new Date(video.addedDate).toLocaleDateString('uk-UA')}</span>
+    `;
 
-        // Оновлюємо активний елемент
-        document.querySelectorAll('.video-item').forEach(el => {
-            el.classList.remove('active');
-        });
-        
-        const activeItem = document.querySelector(`.video-item[data-index="${index}"]`);
-        if (activeItem) {
-            activeItem.classList.add('active');
-            activeItem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }
+    // Оновлюємо активний елемент
+    document.querySelectorAll('.video-item').forEach(el => {
+        el.classList.remove('active');
+    });
+    
+    const activeItem = document.querySelector(`.video-item[data-index="${index}"]`);
+    if (activeItem) {
+        activeItem.classList.add('active');
+        activeItem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
+
+    // Скрол до відеоплеєра (тільки на мобільних)
+    if (window.innerWidth <= 968) {
+        // Затримка, щоб дати час завантажитись iframe
+        setTimeout(() => {
+            const videoPlayer = document.querySelector('.video-player');
+            if (videoPlayer) {
+                videoPlayer.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'start' 
+                });
+            }
+        }, 300);
+    }
+}
 
     // Фільтрація відео
     function filterVideos(filter) {
@@ -1059,6 +1074,4 @@
 </script>
 
 </body>
-
 </html>
-
