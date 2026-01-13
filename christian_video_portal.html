@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
@@ -192,6 +192,56 @@
             margin-bottom: 20px;
             padding-bottom: 15px;
             border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .playlist-title-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .playlist-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .search-box {
+            position: relative;
+            width: 100%;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 45px 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: var(--text-main);
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--accent-blue);
+        }
+
+        .search-box input::placeholder {
+            color: #64748b;
+        }
+
+        .search-box i {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #64748b;
+            pointer-events: none;
         }
 
         .filter-tabs {
@@ -471,7 +521,16 @@
 
         <div class="playlist-panel">
             <div class="playlist-header">
-                <i class="fas fa-list"></i> Плейлист
+                <div class="playlist-title-row">
+                    <div class="playlist-title">
+                        <i class="fas fa-list"></i> Плейлист
+                    </div>
+                </div>
+                
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Пошук проповідей..." onkeyup="searchVideos()">
+                    <i class="fas fa-search"></i>
+                </div>
             </div>
             
             <div class="filter-tabs">
@@ -548,6 +607,7 @@
 
     let allVideos = [];
     let currentFilter = 'all';
+    let searchQuery = '';
 
     // Ініціалізація плеєра
     async function initPlayer() {

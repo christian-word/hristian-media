@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
@@ -239,11 +239,17 @@
 
         .playlist-header {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
+            flex-direction: column;
+            gap: 15px;
             margin-bottom: 20px;
             padding-bottom: 15px;
             border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .playlist-title-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
         .playlist-title {
@@ -265,6 +271,41 @@
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 700;
+        }
+
+        .search-box {
+            position: relative;
+            width: 100%;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 45px 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: var(--text-main);
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--accent-purple);
+        }
+
+        .search-box input::placeholder {
+            color: #64748b;
+        }
+
+        .search-box i {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #64748b;
+            pointer-events: none;
         }
 
         .category-filters {
@@ -600,11 +641,18 @@
 
         <div class="playlist-sidebar">
             <div class="playlist-header">
-                <div class="playlist-title">
-                    <i class="fas fa-list-music"></i>
-                    Плейлист
+                <div class="playlist-title-row">
+                    <div class="playlist-title">
+                        <i class="fas fa-list-music"></i>
+                        Плейлист
+                    </div>
+                    <div class="playlist-count" id="songCount">0</div>
                 </div>
-                <div class="playlist-count" id="songCount">0</div>
+                
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Пошук пісень..." onkeyup="searchSongs()">
+                    <i class="fas fa-search"></i>
+                </div>
             </div>
             
             <div class="category-filters">
@@ -675,7 +723,7 @@
 </footer>
 
 <script>
-    // Підключення до бази даних (поки що спільна)
+    // Підключення до бази даних музики
     const JSON_URL = 'https://raw.githubusercontent.com/christian-word/hristian-media/refs/heads/main/json/myz-database.json';
     const player = document.getElementById('mainPlayer');
     const listContainer = document.getElementById('songsList');
@@ -686,6 +734,7 @@
 
     let allSongs = [];
     let currentFilter = 'all';
+    let searchQuery = '';
 
     // Ініціалізація плеєра
     async function initPlayer() {
@@ -725,17 +774,31 @@
         }
     }
 
+    // Пошук пісень
+    function searchSongs() {
+        searchQuery = document.getElementById('searchInput').value.toLowerCase();
+        renderPlaylist();
+    }
+
     // Відображення плейлиста
     function renderPlaylist() {
         let songsToShow = allSongs;
 
         // Фільтрація за категорією
         if (currentFilter !== 'all') {
-            songsToShow = allSongs.filter(s => s.category === currentFilter);
+            songsToShow = songsToShow.filter(s => s.category === currentFilter);
+        }
+
+        // Фільтрація за пошуковим запитом
+        if (searchQuery) {
+            songsToShow = songsToShow.filter(s => 
+                s.title.toLowerCase().includes(searchQuery) ||
+                s.channel.toLowerCase().includes(searchQuery)
+            );
         }
 
         if (songsToShow.length === 0) {
-            listContainer.innerHTML = '<p class="loading">Пісні не знайдено в цій категорії</p>';
+            listContainer.innerHTML = '<p class="loading">Пісні не знайдено</p>';
             return;
         }
 
