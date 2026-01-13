@@ -269,6 +269,36 @@
             color: var(--accent-blue);
         }
 
+        .source-tabs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 15px;
+            padding: 5px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+        }
+
+        .source-tabs button {
+            padding: 12px;
+            background: transparent;
+            border: none;
+            border-radius: 8px;
+            color: #94a3b8;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .source-tabs button.active {
+            background: var(--accent-blue);
+            color: #000;
+        }
+
         .video-list {
             display: flex;
             flex-direction: column;
@@ -505,7 +535,7 @@
 <main class="main-content">
     <div class="section-header">
         <h1 class="section-title">Проповіді</h1>
-        <p class="section-subtitle">Архів проповідей та служінь церкви "Дім Євангелія"</p>
+        <p class="section-subtitle">Християнські проповіді та служіння</p>
     </div>
 
     <div class="player-section">
@@ -525,6 +555,17 @@
                     <div class="playlist-title">
                         <i class="fas fa-list"></i> Плейлист
                     </div>
+                </div>
+                
+                <div class="source-tabs">
+                    <button class="active" onclick="switchSource('our')">
+                        <i class="fas fa-church"></i>
+                        Наші проповіді
+                    </button>
+                    <button onclick="switchSource('recommended')">
+                        <i class="fas fa-star"></i>
+                        Рекомендовані
+                    </button>
                 </div>
                 
                 <div class="search-box">
@@ -645,6 +686,13 @@
         }
     }
 
+    // Декодування HTML entities
+    function decodeHTML(text) {
+        const textarea = document.createElement('textarea');
+        textarea.innerHTML = text;
+        return textarea.value;
+    }
+
     // Відображення плейлиста
     function renderPlaylist() {
         let videosToShow = allVideos;
@@ -664,6 +712,7 @@
         listContainer.innerHTML = videosToShow.map((video, index) => {
             const actualIndex = allVideos.indexOf(video);
             const date = new Date(video.addedDate).toLocaleDateString('uk-UA');
+            const decodedTitle = decodeHTML(video.title);
             
             return `
                 <div class="video-item ${actualIndex === 0 ? 'active' : ''}" 
@@ -672,7 +721,7 @@
                     <img src="${video.thumbnail}" alt="thumbnail">
                     <div class="video-item-info">
                         <div class="video-item-title">
-                            ${video.title}
+                            ${decodedTitle}
                             ${video.isNew ? '<span class="new-badge">Нове</span>' : ''}
                         </div>
                         <div class="video-item-channel">${video.channel}</div>
@@ -686,7 +735,7 @@
     // Відтворення відео
     function playVideo(video, index) {
         player.src = `https://www.youtube.com/embed/${video.videoId}?autoplay=1`;
-        currentTitle.textContent = video.title;
+        currentTitle.textContent = decodeHTML(video.title);
         currentMeta.textContent = `${video.channel} • ${new Date(video.addedDate).toLocaleDateString('uk-UA')}`;
 
         // Оновлюємо активний елемент
