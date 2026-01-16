@@ -498,7 +498,7 @@
     
     .schedule-item.current{
       border-color: var(--primary-gold);
-      background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(45, 106, 79, 0.1));
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(45, 106, 79, 0.15));
       box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
     }
     
@@ -507,7 +507,7 @@
     }
     
     .schedule-item.played{
-      opacity: 0.5;
+      opacity: 0.4;
     }
     
     .schedule-item.watched{
@@ -545,25 +545,19 @@
       gap: 6px;
     }
     
-    .schedule-item strong{
-      font-weight: 600;
-      font-size: 15px;
-      color: var(--text-dark);
-      line-height: 1.4;
-    }
-
+    .schedule-item strong,
     .schedule-item small{
       font-weight: 400;
-      font-size: 13px;
-      color: var(--text-gray);
+      font-size: 14px;
+      color: var(--text-dark);
       line-height: 1.4;
     }
     
     .time-remaining{
-      font-size: 13px;
-      font-weight: 600;
+      font-size: 12px;
+      font-weight: 400;
       color: var(--primary-gold);
-      margin-top: 4px;
+      margin-top: 2px;
     }
 
     /* Повноекранна кнопка */
@@ -1217,14 +1211,11 @@
       
       const cur = document.querySelector(`.schedule-item[data-index="${index}"]`);
       if(cur) {
-        const list = document.getElementById('scheduleList');
-        const itemTop = cur.offsetTop;
-        const listHeight = list.clientHeight;
-        const itemHeight = cur.clientHeight;
-        
-        list.scrollTo({
-          top: itemTop - (listHeight / 2) + (itemHeight / 2),
-          behavior: 'smooth'
+        // Використовуємо scrollIntoView замість ручного scrollTo
+        cur.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+          inline: 'nearest'
         });
       }
     }
