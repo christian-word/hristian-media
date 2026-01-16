@@ -251,6 +251,39 @@
     .overlay-button i {
       font-size: 1.3rem;
     }
+
+    /* Мобільна адаптація оверлея */
+    @media (max-width: 768px) {
+      .overlay-content {
+        padding: 20px;
+        transform: translateY(-15%);
+      }
+
+      .overlay-icon {
+        font-size: 3rem;
+        margin-bottom: 16px;
+      }
+
+      .overlay-content h3 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+      }
+
+      .overlay-content p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+      }
+
+      .overlay-button {
+        padding: 12px 28px;
+        font-size: 0.95rem;
+        gap: 8px;
+      }
+
+      .overlay-button i {
+        font-size: 1rem;
+      }
+    }
     
     #live-indicator{
       position: absolute;
