@@ -1,0 +1,713 @@
+{
+  "broadcastStartTime": "2026-01-20T22:00:00.000Z",
+  "programSchedule": [
+    {
+      "videoId": "MilNYth46E0",
+      "title": "Прославлення Господа 28 березня 2024 року",
+      "startTime": 0,
+      "duration": 1716
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 1716,
+      "duration": 16
+    },
+    {
+      "videoId": "epLLC-8PryE",
+      "title": "Пісня \"Господом втішаюся\". Тимофій Охріменко, 21.09.2025",
+      "startTime": 1732,
+      "duration": 253
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 1985,
+      "duration": 16
+    },
+    {
+      "videoId": "PHyluzcELUU",
+      "title": "\"4 елементи, потрібні для повної перемоги над дияволом\"(1Пет 5:8-11).Олександр Іванченко, 19.01.2025",
+      "startTime": 2001,
+      "duration": 2064
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 4065,
+      "duration": 16
+    },
+    {
+      "videoId": "At0rGxu8Bf8",
+      "title": "О годы, куда вы летите?",
+      "startTime": 4081,
+      "duration": 280
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 4361,
+      "duration": 16
+    },
+    {
+      "videoId": "NLGJR6DF8xc",
+      "title": "\"Радісна Новина!\" (Іс. 61:1-9). Андрій Булигін, 23.03.2025",
+      "startTime": 4377,
+      "duration": 2254
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 6631,
+      "duration": 16
+    },
+    {
+      "videoId": "2pu64tHNC7o",
+      "title": "\"Ще одна таємниця\" (Римл 16:25-27). Микола Марйоха,16.07.2023",
+      "startTime": 6647,
+      "duration": 901
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 7548,
+      "duration": 16
+    },
+    {
+      "videoId": "4lUNAEB5ZmM",
+      "title": "Прославлення Господа 9 квітня 2023 року (ВЕЧІР)",
+      "startTime": 7564,
+      "duration": 3580
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 11144,
+      "duration": 16
+    },
+    {
+      "videoId": "bM1d0FMUl48",
+      "title": "\"Приниження Господа - спасіння для нас\" (Ісаї 53:1-5). Микола Марйоха, 02.06.2024",
+      "startTime": 11160,
+      "duration": 1276
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 12436,
+      "duration": 16
+    },
+    {
+      "videoId": "p0VnH_ABH2o",
+      "title": "Прославлення Господа 22.09.2024",
+      "startTime": 12452,
+      "duration": 1973
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 14425,
+      "duration": 16
+    },
+    {
+      "videoId": "PjppDWFrtjk",
+      "title": "\"Клятва і християнин\" (Якова 5:12). Віталій Зінченко, 22.12.2024",
+      "startTime": 14441,
+      "duration": 1364
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 15805,
+      "duration": 16
+    },
+    {
+      "videoId": "ONe9IThhklU",
+      "title": "\"Чудо із чудес - наш Христос ВОСКРЕС\". Тимофій та Влад Охріменки, 20.04.2025",
+      "startTime": 15821,
+      "duration": 247
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 16068,
+      "duration": 16
+    },
+    {
+      "videoId": "VX7p1XQuVgs",
+      "title": "\"Подивись, як лагідно і ніжно\". Служіння хору, 25.08.2024",
+      "startTime": 16084,
+      "duration": 242
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 16326,
+      "duration": 16
+    },
+    {
+      "videoId": "MObhuCQ9xZs",
+      "title": "Друга свічка Адвенту - Мир",
+      "startTime": 16342,
+      "duration": 35
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 16377,
+      "duration": 16
+    },
+    {
+      "videoId": "r6qtrUX_fog",
+      "title": "\"Останнє слово завжди каже Бог\". Читає вірш Катерина Іванченко, 20.07.2025",
+      "startTime": 16393,
+      "duration": 159
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 16552,
+      "duration": 16
+    },
+    {
+      "videoId": "wv8accU6MQA",
+      "title": "\"Жены, повинуйтесь своим мужьям\" (1 Петра 3:1-6). Сергей Комисар,14.07.2024",
+      "startTime": 16568,
+      "duration": 2696
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 19264,
+      "duration": 16
+    },
+    {
+      "videoId": "G1cT0ELPV3U",
+      "title": "\"Очікуваний Месія\" (Луки 2:21-35). Андрій Міщенко, 02.02.2025",
+      "startTime": 19280,
+      "duration": 1550
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 20830,
+      "duration": 16
+    },
+    {
+      "videoId": "juhI0U_A1gw",
+      "title": "\"Загублені на \"Полі чудес\" (Мтв.6:24-34). Микола Марйоха, 19.10.2025",
+      "startTime": 20846,
+      "duration": 2149
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 22995,
+      "duration": 16
+    },
+    {
+      "videoId": "xslt7tuzPa4",
+      "title": "\"Богоугодна молитва\" ( 1 Тим 2:1-8). Андрій Міщенко, 30.06.2024",
+      "startTime": 23011,
+      "duration": 1753
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 24764,
+      "duration": 16
+    },
+    {
+      "videoId": "bnr7hC6zLcY",
+      "title": "Свідоцтво та прославлення Господа. Валентин Малінов (с.Світязь, Волинська обл.), 18.08.2024",
+      "startTime": 24780,
+      "duration": 533
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 25313,
+      "duration": 16
+    },
+    {
+      "videoId": "E5XwzFm1wHQ",
+      "title": "Життя церкви \"Дім Євангелія\" від 1 до 95 років",
+      "startTime": 25329,
+      "duration": 245
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 25574,
+      "duration": 16
+    },
+    {
+      "videoId": "19zrOvtmvaM",
+      "title": "\"Гріх - причина Голгофи\" (Мф 26:21-28). Микола Марйоха, 4 грудня 2022 року",
+      "startTime": 25590,
+      "duration": 918
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 26508,
+      "duration": 16
+    },
+    {
+      "videoId": "kc_vrcOj2yo",
+      "title": "\"Ходімо у Господній храм!\" (Псалом 122). Андрій Булигін, 01.01.2024",
+      "startTime": 26524,
+      "duration": 1467
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 27991,
+      "duration": 16
+    },
+    {
+      "videoId": "ae1xhJjJQTE",
+      "title": "Прославлення Господа 13 жовтня 2024 року",
+      "startTime": 28007,
+      "duration": 2070
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 30077,
+      "duration": 16
+    },
+    {
+      "videoId": "QEmCiRfi2kw",
+      "title": "\"Настанова для пасторів\" (1 Тимофія 4:12). Валерій Антонюк, 23.11.2025",
+      "startTime": 30093,
+      "duration": 2149
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 32242,
+      "duration": 16
+    },
+    {
+      "videoId": "h-ZSgVuFS0g",
+      "title": "Падіння Вавилону великого (Об'явлення 18). Віктор Лаба, 17.11.2024",
+      "startTime": 32258,
+      "duration": 2343
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 34601,
+      "duration": 16
+    },
+    {
+      "videoId": "2INp3C81xYQ",
+      "title": "Заклик до християн від Андрія Парфило",
+      "startTime": 34617,
+      "duration": 58
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 34675,
+      "duration": 16
+    },
+    {
+      "videoId": "6iBXjLUGKe0",
+      "title": "\"Ви - сіль землі\" (Матвія 5:1-16). Микола Марйоха , 14.04.2024",
+      "startTime": 34691,
+      "duration": 1612
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 36303,
+      "duration": 16
+    },
+    {
+      "videoId": "euyyXiQmE4Q",
+      "title": "\"Вечеря Господня як знак єдності з Ісусом й один з одним (Івана 6:54). Микола Марйоха, 02.03.2025",
+      "startTime": 36319,
+      "duration": 1491
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 37810,
+      "duration": 16
+    },
+    {
+      "videoId": "Q5t2oq90u4Y",
+      "title": "\"Две мудрости: от Бога, от мира сего\" (1Кор. 2:6-14). Сергей Комисар, 17.12.2023",
+      "startTime": 37826,
+      "duration": 2786
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 40612,
+      "duration": 16
+    },
+    {
+      "videoId": "uvgRe73a75E",
+      "title": "Вступ в послання до Тита \"Вчення, що змінює життя\". Андрій Парфіло, 18 грудня 2022 року",
+      "startTime": 40628,
+      "duration": 1581
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 42209,
+      "duration": 16
+    },
+    {
+      "videoId": "8kpOry-C_kk",
+      "title": "Біблійний вікенд по книзі пророка Огії. Проповідь 4. Руслан Качур, 17.062023",
+      "startTime": 42225,
+      "duration": 3105
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 45330,
+      "duration": 16
+    },
+    {
+      "videoId": "Us1jRgluN84",
+      "title": "\"Атрибути Царя!\" (Луки 2:1-7). Яків Деркач, 25.12.2024",
+      "startTime": 45346,
+      "duration": 1106
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 46452,
+      "duration": 16
+    },
+    {
+      "videoId": "UXSOhV3fsbo",
+      "title": "\"Практика здорового учения для пожилых верующих\" (Тит 2:1-5). Андрей Парфило, 25.06.2023",
+      "startTime": 46468,
+      "duration": 2316
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 48784,
+      "duration": 16
+    },
+    {
+      "videoId": "27V6JBwaUIY",
+      "title": "Прославлення Господа 12.11.2023",
+      "startTime": 48800,
+      "duration": 829
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 49629,
+      "duration": 16
+    },
+    {
+      "videoId": "YG_eXHOupu8",
+      "title": "\"Величному\". Хор церкви \"Дім Євангелія\" (м.Суми)",
+      "startTime": 49645,
+      "duration": 252
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 49897,
+      "duration": 16
+    },
+    {
+      "videoId": "mrFK5i4J8tY",
+      "title": "\"Молились женщины\"",
+      "startTime": 49913,
+      "duration": 301
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 50214,
+      "duration": 16
+    },
+    {
+      "videoId": "XU6BYo5nD5U",
+      "title": "\"Бог знає все і завжди поруч\"(Пс. 139). Андрій Булигін, 28.01.2024",
+      "startTime": 50230,
+      "duration": 1358
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 51588,
+      "duration": 16
+    },
+    {
+      "videoId": "ljXNsK2Ec7c",
+      "title": "\"Ви - лист Христів\" (2 Кор 3:3). Микола Марйоха, 06.07.2025",
+      "startTime": 51604,
+      "duration": 1213
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 52817,
+      "duration": 16
+    },
+    {
+      "videoId": "rZkYQjL-pfI",
+      "title": "Якості Бога. Божа праведність і справедливість (Псалом 118:137-144). Андрій Міщенко, 30 квітня 2023",
+      "startTime": 52833,
+      "duration": 1035
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 53868,
+      "duration": 16
+    },
+    {
+      "videoId": "n0XLq6tYerU",
+      "title": "\"Кому дано знать тайны Царства Небесного?\" (Мтф 13). Сергей Комисар, 15 января 2023 года.",
+      "startTime": 53884,
+      "duration": 2119
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 56003,
+      "duration": 16
+    },
+    {
+      "videoId": "IdCXCPm-9_w",
+      "title": "\"Вірю я, Господи\". Служіння хору, 02.06.2024",
+      "startTime": 56019,
+      "duration": 260
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 56279,
+      "duration": 16
+    },
+    {
+      "videoId": "rAV4bvXR7MY",
+      "title": "Прославлення Господа 21 січня 2024 року",
+      "startTime": 56295,
+      "duration": 1257
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 57552,
+      "duration": 16
+    },
+    {
+      "videoId": "PsifFrIHBO8",
+      "title": "\"Весілля Агнця. Христос на білому коні\" (Об'явлення 19:1-21). Віктор Лаба, 12.01.2025",
+      "startTime": 57568,
+      "duration": 2796
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 60364,
+      "duration": 16
+    },
+    {
+      "videoId": "sMF5ZFCeik4",
+      "title": "\"Життєві турботи\" (Матв. 6:25-34). Микола Марйоха, 21.12.2025",
+      "startTime": 60380,
+      "duration": 1367
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 61747,
+      "duration": 16
+    },
+    {
+      "videoId": "KZYZRPOF290",
+      "title": "Паралелі сімейного шлюбу, плоті й духа. Проповідує Лаба Віктор 21 серпня 2022 року",
+      "startTime": 61763,
+      "duration": 1753
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 63516,
+      "duration": 16
+    },
+    {
+      "videoId": "g1hZ_gvQzqs",
+      "title": "НАДІЯ - перша свічка Адвенту (02.12.2023)",
+      "startTime": 63532,
+      "duration": 5737
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 69269,
+      "duration": 16
+    },
+    {
+      "videoId": "ez27GMpIN2k",
+      "title": "\"Люди, которым нужно закрывать рот\" (Тит 1:10-16). Андрей Парфило, 21 мая 2023 г.",
+      "startTime": 69285,
+      "duration": 1872
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 71157,
+      "duration": 16
+    },
+    {
+      "videoId": "OBu4QkNDRjI",
+      "title": "\"Влада Божого провидіння в виконанні Його плану\" (Дії 12). Андрій Парфило, 16.03.2025",
+      "startTime": 71173,
+      "duration": 2197
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 73370,
+      "duration": 16
+    },
+    {
+      "videoId": "BD5S_NJzJAU",
+      "title": "Прославлення Господа 08 вересня 2024 року",
+      "startTime": 73386,
+      "duration": 1363
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 74749,
+      "duration": 16
+    },
+    {
+      "videoId": "nOvUnkKGBIE",
+      "title": "Прославлення Господа 7 січня 2024 року",
+      "startTime": 74765,
+      "duration": 1399
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 76164,
+      "duration": 16
+    },
+    {
+      "videoId": "7_dy__UI5XM",
+      "title": "\"Вечеря Господня\" (1Коринтян 11:23-26). Микола Марйоха, 07.01.2024",
+      "startTime": 76180,
+      "duration": 1284
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 77464,
+      "duration": 16
+    },
+    {
+      "videoId": "iSYPW9vTPPY",
+      "title": "\"Надія\" (Римлян 15:13). Микола Марйоха, 15.09.2024",
+      "startTime": 77480,
+      "duration": 239
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 77719,
+      "duration": 16
+    },
+    {
+      "videoId": "d-OVswKdl4s",
+      "title": "\"Добрі справи - без нагороди\" (Матф. 6:1-4). Микола Марйоха, 15.06.2025",
+      "startTime": 77735,
+      "duration": 1704
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 79439,
+      "duration": 16
+    },
+    {
+      "videoId": "R-DxfjEDd50",
+      "title": "\"Цінуй Царство Боже більше ніж гріховні задоволення\" (Матфія 5:27-32). Микола Марйоха 08.12.2024",
+      "startTime": 79455,
+      "duration": 1830
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 81285,
+      "duration": 16
+    },
+    {
+      "videoId": "yI5dhjKNSwc",
+      "title": "Прославлення Господа 26 травня 2024 року",
+      "startTime": 81301,
+      "duration": 1733
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 83034,
+      "duration": 16
+    },
+    {
+      "videoId": "13XWMuUi4F8",
+      "title": "Прославлення Господа 16 листопада 2025 року",
+      "startTime": 83050,
+      "duration": 1825
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 84875,
+      "duration": 16
+    },
+    {
+      "videoId": "A7y82iRvOiM",
+      "title": "\"Вірим ми\". Хор церкви ЄХБ \"Дім Євангелія\"",
+      "startTime": 84891,
+      "duration": 265
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 85156,
+      "duration": 16
+    },
+    {
+      "videoId": "n2AXysPV-Hw",
+      "title": "Прославлення Господа 08.10.2023 року",
+      "startTime": 85172,
+      "duration": 1008
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 86180,
+      "duration": 16
+    },
+    {
+      "videoId": "WKyAviDN54s",
+      "title": "Рукопокладання на пасторське та дияконське служіння, 23.11.2025",
+      "startTime": 86196,
+      "duration": 8247
+    },
+    {
+      "videoId": "bCYJBth0I3g",
+      "title": "[PROMO] promo",
+      "startTime": 94443,
+      "duration": 16
+    }
+  ]
+}
