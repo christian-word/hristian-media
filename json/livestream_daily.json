@@ -1,329 +1,329 @@
 {
-  "broadcastStartTime": "2026-01-21T22:00:00.000Z",
+  "broadcastStartTime": "2026-01-22T22:00:00.000Z",
   "programSchedule": [
     {
-      "videoId": "ljXNsK2Ec7c",
-      "title": "\"Ви - лист Христів\" (2 Кор 3:3). Микола Марйоха, 06.07.2025",
+      "videoId": "irwefNUl1Jk",
+      "title": "Мой дом и я служить хотим",
       "startTime": 0,
-      "duration": 1213
+      "duration": 119
     },
     {
-      "videoId": "lVor6nAzYlc",
-      "title": "\"Рождество Исуса Христа\" (Луки 2:8-14). Сергей Савченко, 25.12.2025",
-      "startTime": 1213,
-      "duration": 1203
+      "videoId": "sDSRgvCLx10",
+      "title": "\"Милість Господа\". Загальний спів, 04.05.2025",
+      "startTime": 119,
+      "duration": 315
     },
     {
-      "videoId": "cZ7lCadUiXc",
-      "title": "Когда Ты рядом",
-      "startTime": 2416,
-      "duration": 291
+      "videoId": "J_smlCo86wE",
+      "title": "Прославлення Господа 24 грудня 2023 року",
+      "startTime": 434,
+      "duration": 745
     },
     {
-      "videoId": "wGMkziCCB6I",
-      "title": "\"Откуда у вас вражды и распри\" (Иак 4:1). Сергей Комисар, 11 декабря 2022",
-      "startTime": 2707,
-      "duration": 2027
+      "videoId": "6i0v-ivsEgQ",
+      "title": "\" Поради на новий навчальний рік\" (Притчі 4:5-15). Віталій Зінченко, 01.09.2024",
+      "startTime": 1179,
+      "duration": 1814
     },
     {
-      "videoId": "4lUNAEB5ZmM",
-      "title": "Прославлення Господа 9 квітня 2023 року (ВЕЧІР)",
-      "startTime": 4734,
-      "duration": 3580
+      "videoId": "GBWN7NqIon0",
+      "title": "Стрітення Господнє. Ранкове служіння 2 лютого 2024 року",
+      "startTime": 2993,
+      "duration": 5037
     },
     {
-      "videoId": "Us1jRgluN84",
-      "title": "\"Атрибути Царя!\" (Луки 2:1-7). Яків Деркач, 25.12.2024",
-      "startTime": 8314,
-      "duration": 1106
+      "videoId": "MazuoUj3KXE",
+      "title": "\"Блаженні миротворці\" (Матвія 5). Микола Марйоха, 11.02.2024",
+      "startTime": 8030,
+      "duration": 2420
     },
     {
-      "videoId": "Uj5KmfW_vZM",
-      "title": "\"Невірний нехай стане вірним\" (Якова 4:4-10). Віталій Зінченко, 14.07.2024",
-      "startTime": 9420,
-      "duration": 2432
+      "videoId": "lcJ3IzROCFg",
+      "title": "\"Корінь вирішення проблем у Євангелії Христовій\"(Огляд послання до Римлян).Віталій Зінченко,19.10.25",
+      "startTime": 10450,
+      "duration": 1953
     },
     {
-      "videoId": "YZzIWZfQ87E",
-      "title": "О Иисус, Спаситель, Ты услышь мою мольбу",
-      "startTime": 11852,
-      "duration": 209
+      "videoId": "UMw2vdqBXLc",
+      "title": "Прославлення Господа 21 травня 2023 року",
+      "startTime": 12403,
+      "duration": 706
     },
     {
-      "videoId": "ae1xhJjJQTE",
-      "title": "Прославлення Господа 13 жовтня 2024 року",
-      "startTime": 12061,
-      "duration": 2070
+      "videoId": "ci2qfD9hGf0",
+      "title": "Не забудь помолитися Богу",
+      "startTime": 13109,
+      "duration": 178
     },
     {
-      "videoId": "idKiGx-FYIU",
-      "title": "Прославлення Господа 24 березня 2024 року",
-      "startTime": 14131,
-      "duration": 566
+      "videoId": "fZlzlId2BKc",
+      "title": "\"Таїнство присутності Бога в Вечері Господній\" ( Мтв 26). Микола Марйоха, 02.07.2023",
+      "startTime": 13287,
+      "duration": 1075
     },
     {
-      "videoId": "yq4qFGPVdV8",
-      "title": "\"Криваві плями, бачу я, встеляють шлях\". Спів братів 05.11.2023",
-      "startTime": 14697,
-      "duration": 264
+      "videoId": "BBNGUEXmzpc",
+      "title": "\"Три аспекти смирення\" (1Петра 5:5-7). Олександр Іванченко, 15.12.2024",
+      "startTime": 14362,
+      "duration": 2439
     },
     {
-      "videoId": "C1bS2umWKvI",
-      "title": "\"Особиста проповідь Євангелія\" (1Кор 1:23). Микола Марйоха, 8 січня 2023 року",
-      "startTime": 14961,
-      "duration": 1210
+      "videoId": "ibrb9I_ZFcY",
+      "title": "\"Спокій у час тривоги\" (Пс 4).Андрій Міщенко 30 жовтня 202 року",
+      "startTime": 16801,
+      "duration": 967
     },
     {
-      "videoId": "jVcmmoUiyzw",
-      "title": "\"Яке значення має ТІЛО?\" (Євр. 10:5). Віталій Зінченко, 04.02.2024",
-      "startTime": 16171,
-      "duration": 1609
+      "videoId": "Ifudkl8OqYk",
+      "title": "\"Документ підтверджуючий легітимність Царя\" (Мф. 1:1-17; Лк. 3:23-28). Андрій Парфило, 14.12.2025",
+      "startTime": 17768,
+      "duration": 2100
     },
     {
-      "videoId": "A1IIFIClSNU",
-      "title": "Ось Він гряде",
-      "startTime": 17780,
-      "duration": 189
+      "videoId": "D4QIpSAercw",
+      "title": "\"Дві причини для хвали Богу\" (Псалом 106). Андрій Міщенко, 28.09.2025",
+      "startTime": 19868,
+      "duration": 1293
     },
     {
-      "videoId": "MRnut7NwyxE",
-      "title": "\"Як жити у 2024 році?\" (Филип'ян 1). Микола Марйоха, 01.01.2024",
-      "startTime": 17969,
-      "duration": 2222
+      "videoId": "t2bILieN0dQ",
+      "title": "\"Нехай не тривожиться серце ваше\" (Ів 14:1-3). Микола Марйоха, 20 листопада 2022 року",
+      "startTime": 21161,
+      "duration": 1573
     },
     {
-      "videoId": "G6asKOaXQ48",
-      "title": "\"Причини для спокою\" (Псалом 93). Андрій Міщенко, 09.06.2024",
-      "startTime": 20191,
-      "duration": 1124
+      "videoId": "LhNJS5S78uA",
+      "title": "Гей, слухай, люд",
+      "startTime": 22734,
+      "duration": 146
     },
     {
-      "videoId": "RPVorVubiy4",
-      "title": "Мои источники в Тебе",
-      "startTime": 21315,
-      "duration": 226
+      "videoId": "P7bDhLtIZug",
+      "title": "Божа любов в Книзі Об'явлень (Об'явлення 9). Булигін Андрій (18 вересня 2022 рік)",
+      "startTime": 22880,
+      "duration": 1821
     },
     {
-      "videoId": "OuSFIlYOw3I",
-      "title": "\"Як не збочити по дорозі до вічності?\" (2 Пет 1:3-11). Андрій Парфило,20.10.2024",
-      "startTime": 21541,
-      "duration": 2424
+      "videoId": "sQIrP3V0_s0",
+      "title": "Водне Хрещення. Служіння 07.07.2024",
+      "startTime": 24701,
+      "duration": 5900
     },
     {
-      "videoId": "Epp0oqjca4o",
-      "title": "У Креста Христова",
-      "startTime": 23965,
-      "duration": 166
+      "videoId": "El_YufGQ2WE",
+      "title": "Прославлення Господа 14 грудня 2025 року",
+      "startTime": 30601,
+      "duration": 1513
     },
     {
-      "videoId": "kc_vrcOj2yo",
-      "title": "\"Ходімо у Господній храм!\" (Псалом 122). Андрій Булигін, 01.01.2024",
-      "startTime": 24131,
-      "duration": 1467
+      "videoId": "wcCFtRLcFX8",
+      "title": "Прославлення Господа 19.11.2023",
+      "startTime": 32114,
+      "duration": 1251
     },
     {
-      "videoId": "08ZR-jAq2iM",
-      "title": "Дияконське служіння в Церкві (Дії 6:1-7). Марйоха Микола 11 вересня 2022 року",
-      "startTime": 25598,
-      "duration": 1316
+      "videoId": "uvgRe73a75E",
+      "title": "Вступ в послання до Тита \"Вчення, що змінює життя\". Андрій Парфіло, 18 грудня 2022 року",
+      "startTime": 33365,
+      "duration": 1581
     },
     {
-      "videoId": "QEmCiRfi2kw",
-      "title": "\"Настанова для пасторів\" (1 Тимофія 4:12). Валерій Антонюк, 23.11.2025",
-      "startTime": 26914,
-      "duration": 2149
+      "videoId": "Cl86WQILbdM",
+      "title": "\"Две грани одного Царя\" (Захария 9:9-10). Андрей Парфило, 24.03.2024",
+      "startTime": 34946,
+      "duration": 1957
     },
     {
-      "videoId": "NHwAtRs9Zm8",
-      "title": "\"Подивись, як лагідно і ніжно\" (08.12.2024)",
-      "startTime": 29063,
-      "duration": 240
+      "videoId": "ZDuBsPDCvJU",
+      "title": "Прославлення Господа 30.11.2025",
+      "startTime": 36903,
+      "duration": 2119
     },
     {
-      "videoId": "jusPZ_7j0Gs",
-      "title": "\"Верность в нестабильном мире\" (Бытие 39). Андрей Парфило, 28.01.2024",
-      "startTime": 29303,
-      "duration": 2459
+      "videoId": "sCxDWB22kWc",
+      "title": "Прославлення Господа 14 січня 2024 року",
+      "startTime": 39022,
+      "duration": 732
     },
     {
-      "videoId": "bNZpS2rH9Qk",
-      "title": "\"Заблуждение и как обезопасить себя от него\" (2 Петра 3:17-18). Сергей Комисар, 24.11.2024",
-      "startTime": 31762,
-      "duration": 2709
+      "videoId": "iO3eq1RDbIU",
+      "title": "Звернення пастора церкви ЄХБ \"Дім Євангелія\" 12.04.2020",
+      "startTime": 39754,
+      "duration": 855
     },
     {
-      "videoId": "AoLj5K6a6Zc",
-      "title": "\"Достаточность во Христе\" (Фил 1:21; 3:7; 4:13). Андрей Парфило, 3 сентября 2023 г.",
-      "startTime": 34471,
-      "duration": 2173
+      "videoId": "0nU3n1fqJzA",
+      "title": "Я жизнь отдал за тебя",
+      "startTime": 40609,
+      "duration": 213
     },
     {
-      "videoId": "7bqAM2y9smU",
-      "title": "\"Вечеря Господня - частина великої Євангелії\" (1 Коринтян 15:1-3). Микола Марйоха, 04.05.2025",
-      "startTime": 36644,
-      "duration": 1542
+      "videoId": "Ctf7UsmCQeQ",
+      "title": "\"Радість Різдва\" (Луки 2:7-14). Микола Марйоха, 25.12.2024",
+      "startTime": 40822,
+      "duration": 837
     },
     {
-      "videoId": "Ej-bq2AjdNo",
-      "title": "\"Добре сумління\" (1Петра 3:15-16). Андрій Міщенко, 23 серпня 2023 року",
-      "startTime": 38186,
-      "duration": 1318
+      "videoId": "xM32vk3fN-g",
+      "title": "\"Ким Ісус є для тебе?\" (Матвія 17:1). Андрій Булигін, 06.08.2023 (вечірнє святкове служіння)",
+      "startTime": 41659,
+      "duration": 1546
     },
     {
-      "videoId": "ZKBH1o0EHW0",
-      "title": "\"Дивовижний Бог\" (Луки 2:15-18). Микола Марйоха, 28.12.2025",
-      "startTime": 39504,
-      "duration": 712
+      "videoId": "lWdci8VItV8",
+      "title": "\"Пример Божьего провидения. Поиски Ревекки\" (Быт 24). Виталий Зинченко 9 октября 2022 года",
+      "startTime": 43205,
+      "duration": 1831
     },
     {
-      "videoId": "o4aPtp6_BXM",
-      "title": "\"Блаженні вигнані за праведність\" (Матвія 5). Микола Марйоха, 17.03.2024",
-      "startTime": 40216,
-      "duration": 2188
+      "videoId": "XpN53JYLkZA",
+      "title": "Прославлення Господа 2 липня 2023 року",
+      "startTime": 45036,
+      "duration": 2051
     },
     {
-      "videoId": "eCNm6bBZV40",
-      "title": "\"Туга Христа за Єрусалимом\" (Луки 19:29-44). Микола Марйоха, 13.04.2025",
-      "startTime": 42404,
-      "duration": 1966
+      "videoId": "mNg_Y0-QEsQ",
+      "title": "Прославлення Господа 21 вересня 2025 року",
+      "startTime": 47087,
+      "duration": 1975
     },
     {
-      "videoId": "rxh3HgEgbn8",
-      "title": "Фундамент віри і цінностей у вихованні дітей. День 4. 05.06.2025",
-      "startTime": 44370,
-      "duration": 6896
+      "videoId": "q5DkJbyvLc0",
+      "title": "\"Благослови душе моя Господа\"(Пс 103). Андрій Міщенко, 29.06.2025",
+      "startTime": 49062,
+      "duration": 1128
     },
     {
-      "videoId": "n9hmefbTInc",
-      "title": "\"Три принципи, необхідні для достойного християнина\" (Колосян 1:9-11). Олександр Іванченко, 28.12.25",
-      "startTime": 51266,
-      "duration": 2053
+      "videoId": "tZ4lpUq-NP4",
+      "title": "\"Как увидеть Божий смысл в происходящих событиях\" (2 Петра 3:1-9). Сергей Комисар, 11.08.2024",
+      "startTime": 50190,
+      "duration": 2860
     },
     {
-      "videoId": "-EolUHGuzzY",
-      "title": "Sun May 03 2020 00:00:00 GMT+0300 (Eastern European Summer Time)",
-      "startTime": 53319,
-      "duration": 1440
+      "videoId": "8kpOry-C_kk",
+      "title": "Біблійний вікенд по книзі пророка Огії. Проповідь 4. Руслан Качур, 17.062023",
+      "startTime": 53050,
+      "duration": 3105
     },
     {
-      "videoId": "3ZkuZSKX8i4",
-      "title": "\"Джерело втіхи\" (Псалом 3). Андрій Булигін, 10.03.2024",
-      "startTime": 54759,
-      "duration": 1521
+      "videoId": "T_UqRZQ4XmU",
+      "title": "\"Тягар перемін\" (1 Самуїла 7:2). Віталій Зінченко, 26.05.2024",
+      "startTime": 56155,
+      "duration": 1734
     },
     {
-      "videoId": "_5fkXeiclJY",
-      "title": "\"Покорность начальству\" (1Пет 2:13-17). Александр Иванченко 9 октября 2022 года",
-      "startTime": 56280,
-      "duration": 1509
+      "videoId": "kvKzh7FLuzU",
+      "title": "\"Огляд книг, які написав Лука\" (Лука 24:45-48). Віталій Зінченко, 29.06.2025",
+      "startTime": 57889,
+      "duration": 2682
     },
     {
-      "videoId": "0ZFkLgedtvs",
-      "title": "Прославлення Господа 30 червня 2024 року",
-      "startTime": 57789,
-      "duration": 1716
+      "videoId": "-rDgD-UCHMw",
+      "title": "\"Воскресіння Христа - перемога над смертю\" (Луки 24:5-6). Микола Марйоха, 20.04.2025",
+      "startTime": 60571,
+      "duration": 1527
     },
     {
-      "videoId": "GFfwtc5aeKw",
-      "title": "\"Гог з землі Магог \" (Єзек 38-39, паралелі з книгою Зах і Об'явл).  Віктор Лаба, 8 січня 2023 року",
-      "startTime": 59505,
-      "duration": 2582
+      "videoId": "ThGNIxwKreM",
+      "title": "МИР - друга свічка Адвенту (02.12.2023)",
+      "startTime": 62098,
+      "duration": 5562
     },
     {
-      "videoId": "fKAqx5FxzSA",
-      "title": "\"Завіса в Храмі\" (Мк. 15:37-38). Віталій Зінченко, 06.04.2025",
-      "startTime": 62087,
-      "duration": 1364
+      "videoId": "1J4JLr5J-34",
+      "title": "Sumy International Ministry: WEEKEND SCRIPTURE 2 COR. 12:7-9. Andrew Bulyhin.",
+      "startTime": 67660,
+      "duration": 274
     },
     {
-      "videoId": "R8O_G2fphFM",
-      "title": "\"Перемога над спокусами\" (Матвія 4:1-11). Андрій Міщенко, 20.07.2025",
-      "startTime": 63451,
-      "duration": 1680
+      "videoId": "8M19jky-RJU",
+      "title": "\"НЕ служіть ідолам\" (1 Кор. 10:14). Микола Марйоха, 02.11.2025",
+      "startTime": 67934,
+      "duration": 1240
     },
     {
-      "videoId": "mXgvEa1MzFU",
-      "title": "Прославлення Господа 25.12.2025, ранок",
-      "startTime": 65131,
-      "duration": 1080
+      "videoId": "NdqCbr9r6gI",
+      "title": "Слава Божа - \"золота нитка\". (Книга Об'явлень). Проповідує Марйоха Микола Павлович 17.08.2022",
+      "startTime": 69174,
+      "duration": 1032
     },
     {
-      "videoId": "kDcBzeQGStE",
-      "title": "Подорож на гору Преображення. Проповідує Марйоха Микола 19.08.2022",
-      "startTime": 66211,
-      "duration": 1396
+      "videoId": "2INp3C81xYQ",
+      "title": "Заклик до християн від Андрія Парфило",
+      "startTime": 70206,
+      "duration": 58
     },
     {
-      "videoId": "N6UJVMTb1Oc",
-      "title": "\"Перемога Ісуса Христа\" (2 Коринтян 2:14). Микола Марйоха, 01.09.2024",
-      "startTime": 67607,
-      "duration": 886
+      "videoId": "dfMTSjg_TVc",
+      "title": "Прославлення Господа 15 жовтня 2023 року",
+      "startTime": 70264,
+      "duration": 771
     },
     {
-      "videoId": "2fwCHY_Vz2Y",
-      "title": "\"Как преодолеть лицеприятие?\" (Иакова 2:1-4). Виталий Зинченко, 26.11.2023",
-      "startTime": 68493,
-      "duration": 2408
+      "videoId": "btNFC-G98Y0",
+      "title": "\"Праведність вища за фарисейську\" (Матв 5:20). Микола Марйоха, 20.10.2024",
+      "startTime": 71035,
+      "duration": 2276
     },
     {
-      "videoId": "-pG3c9rfGf0",
-      "title": "\"Темное небо, багровый закат\". Тимофей и Влад Охрименки, 26.01.2025",
-      "startTime": 70901,
-      "duration": 223
+      "videoId": "IZoPVlPx_kA",
+      "title": "Прославлення Господа 10 березня 2024 року",
+      "startTime": 73311,
+      "duration": 850
     },
     {
-      "videoId": "V9PNRxFYeRE",
-      "title": "\"Доторкніться до Бога\" (Лук 8:41-56). Микола Марйоха, 22 січня 2023 року",
-      "startTime": 71124,
-      "duration": 1591
+      "videoId": "3Z_duAjuaRw",
+      "title": "\"Господи,хіба мало тих,які спасаються?\" (Луки 13:22-30). Віктор Лаба, 12.10.2025",
+      "startTime": 74161,
+      "duration": 2428
     },
     {
-      "videoId": "h-ZSgVuFS0g",
-      "title": "Падіння Вавилону великого (Об'явлення 18). Віктор Лаба, 17.11.2024",
-      "startTime": 72715,
-      "duration": 2343
+      "videoId": "Ldey_nBCCjA",
+      "title": "Прославлення Господа 29.09.2024. День Подяки",
+      "startTime": 76589,
+      "duration": 3288
     },
     {
-      "videoId": "30ztGd_rLl4",
-      "title": "Прославлення Господа 01.09.2024",
-      "startTime": 75058,
-      "duration": 2049
+      "videoId": "mjicx4qL7M0",
+      "title": "Тільки в Бозі в душі є спокій",
+      "startTime": 79877,
+      "duration": 167
     },
     {
-      "videoId": "d8x9QeWLl3A",
-      "title": "\"НЕ чини помсти\" (Матвія 5:38-42) Микола Марйоха, 16.02.2025",
-      "startTime": 77107,
-      "duration": 2292
+      "videoId": "hVQ60hFjP70",
+      "title": "Sat Oct 17 2020 00:00:00 GMT+0300 (Eastern European Summer Time)",
+      "startTime": 80044,
+      "duration": 527
     },
     {
-      "videoId": "oJxdzt0mHsA",
-      "title": "\"Байдужість - найбільше горе нашого часу\" (Матвія 11:16-30). Олександр Іванченко, 23.02.2025",
-      "startTime": 79399,
-      "duration": 2237
+      "videoId": "Cok5-Y3XtzU",
+      "title": "\"Не дивись з тривогою у завтра\". Тимофій, Юлія та Владислав Охріменки. 27.04.2025",
+      "startTime": 80571,
+      "duration": 179
     },
     {
-      "videoId": "ydoPKGAXEqI",
-      "title": "\"Неизбежность страданий\" (1Петра 3:13-17). Александр Иванченко, 27 августа 2023 года",
-      "startTime": 81636,
-      "duration": 1830
+      "videoId": "mlvu_EkXMNA",
+      "title": "\"Світло життя\". Група, 06.07.2025",
+      "startTime": 80750,
+      "duration": 216
     },
     {
-      "videoId": "Dblx8yWI3TA",
-      "title": "\"Пророцтво і очікування обіцяного Царя\" (Іс. 7:14, Міх. 5:1, Іс. 9:1-6).Віталій Зінченко, 30.11.2025",
-      "startTime": 83466,
-      "duration": 1553
+      "videoId": "KZYZRPOF290",
+      "title": "Паралелі сімейного шлюбу, плоті й духа. Проповідує Лаба Віктор 21 серпня 2022 року",
+      "startTime": 80966,
+      "duration": 1753
     },
     {
-      "videoId": "MObhuCQ9xZs",
-      "title": "Друга свічка Адвенту - Мир",
-      "startTime": 85019,
-      "duration": 35
+      "videoId": "bUBYNrRbWkQ",
+      "title": "\"Вірні Божі служителі, які проголошують істинну благодать\"(1Пет 15:12-14).Олександр Іванченко, 03.25",
+      "startTime": 82719,
+      "duration": 2710
     },
     {
-      "videoId": "Q41dQpwI4sc",
-      "title": "\"Небезпеки при молитві\" (Мтф. 6:5-15). Микола Марйоха, 13.07.2025",
-      "startTime": 85054,
-      "duration": 1780
+      "videoId": "s-S34zQPSTw",
+      "title": "\"Життя коротке: одна надія - Ісус\" (Екклезіяст 7:1-4). Андрій Булигін, 27.10.2024",
+      "startTime": 85429,
+      "duration": 2401
     }
   ]
 }
