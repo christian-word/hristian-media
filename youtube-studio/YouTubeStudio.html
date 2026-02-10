@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta property="og:image" content="ico.png"> 
-<title>YouTube Studio</title>
+<title>My YouTube Studio</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -1180,7 +1180,7 @@ font-weight: 500;
 </head>
 <body>
 <header>
-<div class="logo">📺 YouTube Studio</div>
+<div class="logo">📺 MY YOUTUBE STUDIO</div>
 <div class="user-section">
 <div class="sync-badge" id="syncBadge" style="display: none;">
 <div class="sync-dot" id="syncDot"></div>
@@ -1399,6 +1399,7 @@ authScreen.style.display = 'none';
 appContent.style.display = 'block';
 mainTabs.style.display = 'flex';
 syncBadge.style.display = 'flex';
+document.getElementById('playlistTabs').style.display = 'flex';
 authBox.innerHTML = `<img src="${user.photoURL || 'https://www.gravatar.com/avatar/?d=mp'}" class="user-avatar" onclick="logoutUser()">`;
 
 // Используем update вместо set, чтобы НЕ удалять playlistNames
@@ -1415,6 +1416,7 @@ authScreen.style.display = 'flex';
 appContent.style.display = 'none';
 mainTabs.style.display = 'none';
 syncBadge.style.display = 'none';
+document.getElementById('playlistTabs').style.display = 'none';
 authBox.innerHTML = '';
 }
 });
