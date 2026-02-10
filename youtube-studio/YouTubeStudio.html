@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta property="og:image" content="ico2.png"> 
+<meta property="og:image" content="ico.png"> 
 <title>YouTube Studio</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -273,6 +273,7 @@ font-weight: 500;
 transition: all 0.2s;
 white-space: nowrap;
 flex-shrink: 0;
+position: relative;
 }
 
 .playlist-tab:hover {
@@ -284,6 +285,29 @@ color: var(--text);
 background: var(--success);
 color: white;
 border-color: var(--success);
+}
+
+.playlist-delete-btn {
+position: absolute;
+right: 6px;
+top: 50%;
+transform: translateY(-50%);
+cursor: pointer;
+font-size: 1.2rem;
+font-weight: bold;
+color: var(--text-secondary);
+padding: 0 4px;
+line-height: 1;
+transition: color 0.2s, opacity 0.2s;
+opacity: 0;
+}
+
+.playlist-tab:hover .playlist-delete-btn {
+opacity: 1;
+}
+
+.playlist-delete-btn:hover {
+color: var(--accent);
 }
 
 .playlist-tab-add {
@@ -1156,7 +1180,7 @@ font-weight: 500;
 </head>
 <body>
 <header>
-<div class="logo">📺 YouTubeStudio</div>
+<div class="logo">📺 YouTube Studio</div>
 <div class="user-section">
 <div class="sync-badge" id="syncBadge" style="display: none;">
 <div class="sync-dot" id="syncDot"></div>
@@ -2234,7 +2258,17 @@ return seconds;
 // Helpers
 function extractVideoId(url) {
 const patterns = [
-/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&?#]+)/,
+// Обычные видео: youtube.com/watch?v=VIDEO_ID
+/(?:youtube\.com\/watch\?v=)([^&?#]+)/,
+// Короткие ссылки: youtu.be/VIDEO_ID
+/(?:youtu\.be\/)([^&?#]+)/,
+// YouTube Shorts: youtube.com/shorts/VIDEO_ID
+/(?:youtube\.com\/shorts\/)([^&?#]+)/,
+// Embed: youtube.com/embed/VIDEO_ID
+/(?:youtube\.com\/embed\/)([^&?#]+)/,
+// Mobile: m.youtube.com/watch?v=VIDEO_ID
+/(?:m\.youtube\.com\/watch\?v=)([^&?#]+)/,
+// Только ID (11 символов)
 /^([a-zA-Z0-9_-]{11})$/
 ];
 for (const pattern of patterns) {
@@ -2400,6 +2434,56 @@ updateSync('success');
 }
 };
 
+// Delete Playlist
+window.confirmDeletePlaylist = async (playlistName) => {
+if (playlistName === 'Все') {
+showToast('❌ Нельзя удалить плейлист "Все"');
+return;
+}
+
+// Проверяем сколько видео в плейлисте
+const videosInPlaylist = allVideos.filter(v => v.playlist === playlistName);
+const videoCount = videosInPlaylist.length;
+
+if (videoCount > 0) {
+// Плейлист не пустой - предупреждаем пользователя
+const message = `В плейлисте "${playlistName}" есть ${videoCount} ${videoCount === 1 ? 'видео' : 'видео'}.\n\nСначала переместите или удалите все видео из этого плейлиста.`;
+if (!confirm(message)) {
+return;
+}
+showToast(`⚠️ Удалите или переместите ${videoCount} видео из плейлиста`);
+return;
+}
+
+// Плейлист пустой - можно удалять
+const confirmMessage = `Удалить плейлист "${playlistName}"?`;
+if (!confirm(confirmMessage)) {
+return;
+}
+
+updateSync('syncing');
+try {
+// Удаляем плейлист из массива
+const updatedPlaylists = userPlaylists.filter(p => p !== playlistName);
+// Сохраняем в Firebase
+await set(ref(db, 'playlists/' + currentUser.uid + '/playlistNames'), updatedPlaylists);
+// Обновляем локальный массив
+userPlaylists = updatedPlaylists;
+// Если удалили текущий плейлист, переключаемся на "Все"
+if (currentPlaylist === playlistName) {
+currentPlaylist = 'Все';
+renderVideos();
+}
+renderPlaylistTabs();
+updateSync('success');
+showToast(`✅ Плейлист "${playlistName}" удалён`);
+} catch (error) {
+console.error('Error deleting playlist:', error);
+showToast('❌ Ошибка удаления плейлиста: ' + error.message);
+updateSync('success');
+}
+};
+
 window.switchPlaylist = (playlistName) => {
 currentPlaylist = playlistName;
 renderPlaylistTabs();
@@ -2414,8 +2498,22 @@ userPlaylists.forEach(playlist => {
 const btn = document.createElement('button');
 btn.className = `playlist-tab ${currentPlaylist === playlist ? 'active' : ''}`;
 btn.setAttribute('data-playlist', playlist);
-btn.textContent = `📁 ${playlist}`;
+btn.style.paddingRight = playlist !== 'Все' ? '30px' : '14px';
 btn.onclick = () => switchPlaylist(playlist);
+btn.innerHTML = `📁 ${playlist}`;
+
+// Добавляем кнопку удаления для всех плейлистов кроме "Все"
+if (playlist !== 'Все') {
+const deleteBtn = document.createElement('span');
+deleteBtn.className = 'playlist-delete-btn';
+deleteBtn.innerHTML = '×';
+deleteBtn.onclick = (e) => {
+e.stopPropagation();
+confirmDeletePlaylist(playlist);
+};
+btn.appendChild(deleteBtn);
+}
+
 container.appendChild(btn);
 });
 }
